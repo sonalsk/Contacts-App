@@ -2,6 +2,7 @@ import { Button, Table, TableBody, TableCell, TableHead, TableRow } from "@mui/m
 import { useEffect, useState } from "react";
 import { getUsers } from "../Service/api";
 import { makeStyles } from '@mui/styles';
+import { Link } from "react-router-dom";
 
 const useStyles = makeStyles({
     table: {
@@ -21,7 +22,7 @@ const useStyles = makeStyles({
     }
 });
 
-const AllUser = () => {
+const AllContacts = () => {
 
     const [contacts, setUsers] = useState([]);
     const classes = useStyles();
@@ -44,6 +45,7 @@ const AllUser = () => {
                     <TableCell> Username </TableCell>
                     <TableCell> Email </TableCell>
                     <TableCell> Phone </TableCell>
+                    <TableCell> </TableCell>
                 </TableRow>
             </TableHead>
 
@@ -56,6 +58,9 @@ const AllUser = () => {
                             <TableCell> {user.username} </TableCell>
                             <TableCell> {user.email} </TableCell>
                             <TableCell> {user.phone} </TableCell>
+                            <TableCell> 
+                                <Button variant="contained" color="primary" style={{marginRight: 10}} component={Link} to={`/edit/${user.id}`}>Edit</Button>
+                            </TableCell>
                         </TableRow>
                     ))
                 }
@@ -65,4 +70,4 @@ const AllUser = () => {
     )
 }
 
-export default AllUser;
+export default AllContacts;
