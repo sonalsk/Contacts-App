@@ -1,11 +1,25 @@
 {
-    "contacts": [
-      {
-        "name": "Dummy Name",
-        "username": "dummyName",
-        "email": "DummyName@gmail",
-        "phone": "1234567897",
-        "id": 1
-      }
-    ]
+  "contacts": [
+    {
+      "name": "Dummy Name",
+      "username": "dummyName",
+      "email": "DummyName@gmail",
+      "phone": "1234567897",
+      "id": 1
+    },
+    {
+      "name": "Sonal Kushwaha",
+      "username": "asdf",
+      "email": "sonalkushwaha039@gmail.com",
+      "phone": "09667758064",
+      "id": 2
+    },
+    {
+      "name": "sdfg",
+      "username": "sdfg",
+      "email": "dsf",
+      "phone": "sfdgf",
+      "id": 3
+    }
+  ]
 }
