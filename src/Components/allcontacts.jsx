@@ -1,6 +1,6 @@
 import { Button, Table, TableBody, TableCell, TableHead, TableRow } from "@mui/material";
 import { useEffect, useState } from "react";
-import { getUsers } from "../Service/api";
+import { deleteUser, getUsers } from "../Service/api";
 import { makeStyles } from '@mui/styles';
 import { Link } from "react-router-dom";
 
@@ -31,6 +31,11 @@ const AllContacts = () => {
         getAllUsers();
     }, [])
 
+    const deleteUserData = async (id) => {
+        await deleteUser(id);
+        getAllUsers();
+    }
+
     const getAllUsers = async () => {
         let response = await getUsers();
         setUsers(response.data);
@@ -60,6 +65,7 @@ const AllContacts = () => {
                             <TableCell> {user.phone} </TableCell>
                             <TableCell> 
                                 <Button variant="contained" color="primary" style={{marginRight: 10}} component={Link} to={`/edit/${user.id}`}>Edit</Button>
+                                <Button variant="contained" color="secondary" onClick={() => deleteUserData(user.id)}>Delete</Button>
                             </TableCell>
                         </TableRow>
                     ))
