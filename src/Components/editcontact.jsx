@@ -8,9 +8,14 @@ const useStyles = makeStyles({
     conatiner: {
         width: "50%",
         margin: "5% 0 0 25%",
-        '& > *': {
-            marginTop: 20
+        color: 'white',
+        "& > *" : {
+            marginTop: 20,
+            color: 'white'
         }
+    },
+    head: {
+        color: 'white'
     }
 })
 
@@ -48,28 +53,28 @@ const EditContact = () => {
 
     return (
         <FormGroup className={classes.conatiner}>
-            <Typography variant="h4"> Edit User </Typography>
+            <Typography variant="h4"> Edit Contact </Typography>
             <FormControl>
-                <InputLabel> Name </InputLabel>
-                <Input onChange={(e) => onValueChange(e)} name='name' value={name} aria-describedby="my-helper-text" />
+                <InputLabel className={classes.head}> Name </InputLabel>
+                <Input className={classes.head} onChange={(e) => onValueChange(e)} name='name' value={name} aria-describedby="my-helper-text" />
             </FormControl>
 
             <FormControl>
-                <InputLabel> UserName </InputLabel>
-                <Input onChange={(e) => onValueChange(e)} name='username' value={username} aria-describedby="my-helper-text" />
+                <InputLabel className={classes.head}> UserName </InputLabel>
+                <Input className={classes.head} onChange={(e) => onValueChange(e)} name='username' value={username} aria-describedby="my-helper-text" />
             </FormControl>
 
             <FormControl>
-                <InputLabel> EMail </InputLabel>
-                <Input onChange={(e) => onValueChange(e)} name='email' value={email} aria-describedby="my-helper-text" />
+                <InputLabel className={classes.head}> EMail </InputLabel>
+                <Input className={classes.head} onChange={(e) => onValueChange(e)} name='email' value={email} aria-describedby="my-helper-text" />
             </FormControl>
 
             <FormControl>
-                <InputLabel> Phone </InputLabel>
-                <Input onChange={(e) => onValueChange(e)} name='phone' value={phone} aria-describedby="my-helper-text" />
+                <InputLabel className={classes.head}> Phone </InputLabel>
+                <Input className={classes.head} onChange={(e) => onValueChange(e)} name='phone' value={phone} aria-describedby="my-helper-text" />
             </FormControl>
 
-            <Button onClick={() => editUserDetail()} variant="contained" color="primary">Edit User</Button>
+            <Button style={{background: '#ff5757'}} onClick={() => editUserDetail()} variant="contained">Edit Contact</Button>
         </FormGroup>
     )
 }
