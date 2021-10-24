@@ -5,12 +5,17 @@ import { addUser } from '../Service/api';
 import { useHistory } from 'react-router';
 
 const useStyles = makeStyles({
-    conatiner: {
+    container: {
         width: "50%",
         margin: "5% 0 0 25%",
+        color: 'white',
         "& > *" : {
-            marginTop: 20
+            marginTop: 20,
+            color: 'white'
         }
+    },
+    head: {
+        color: 'white'
     }
 })
 
@@ -38,29 +43,29 @@ const NewContact = () => {
     }
 
     return (
-        <FormGroup className={classes.conatiner}>
-            <Typography variant="h4"> Add User </Typography>
+        <FormGroup className={classes.container}>
+            <Typography variant="h4"> Add New Contact </Typography>
             <FormControl>
-                <InputLabel> Name </InputLabel>
-                <Input onChange={(e) => onValueChange(e)} name='name' value={name} />
+                <InputLabel className={classes.head}> Name </InputLabel>
+                <Input className={classes.head} onChange={(e) => onValueChange(e)} name='name' value={name} />
             </FormControl>
 
             <FormControl>
-                <InputLabel> UserName </InputLabel>
-                <Input onChange={(e) => onValueChange(e)} name='username' value={username} />
+                <InputLabel className={classes.head}> UserName </InputLabel>
+                <Input className={classes.head} onChange={(e) => onValueChange(e)} name='username' value={username} />
             </FormControl>
 
             <FormControl>
-                <InputLabel> EMail </InputLabel>
-                <Input onChange={(e) => onValueChange(e)} name='email' value={email} />
+                <InputLabel className={classes.head}> EMail </InputLabel>
+                <Input className={classes.head} onChange={(e) => onValueChange(e)} name='email' value={email} />
             </FormControl>
 
             <FormControl>
-                <InputLabel> Phone </InputLabel>
-                <Input onChange={(e) => onValueChange(e)} name='phone' value={phone} />
+                <InputLabel className={classes.head}> Phone </InputLabel>
+                <Input className={classes.head} onChange={(e) => onValueChange(e)} name='phone' value={phone} />
             </FormControl>
 
-            <Button onClick={() => addUserDetail()} variant="contained" color="primary">Add User</Button>
+            <Button style={{background: '#ff5757'}} onClick={() => addUserDetail()} variant="contained">Add Contact</Button>
         </FormGroup>
     )
 }
