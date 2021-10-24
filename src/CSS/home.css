@@ -1,0 +1,28 @@
+.head {
+    background-color: #191824 !important;
+    align-items: center;
+    margin-top: 10%;
+    margin-bottom: 5%;
+}
+
+.tabs {
+    color: #ffffff;
+    text-decoration: none;
+    margin-right: 5rem;
+    font-size: 2rem;
+}
+
+.home-bg {
+    width: 140%;
+    padding: 2rem;
+}
+
+.home-text {
+    color: #ffffff;
+    
+    width: 140%;
+    padding: 2rem;
+    
+    font-size: 5rem;
+    font-weight: bold;
+}
