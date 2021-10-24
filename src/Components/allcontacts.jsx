@@ -46,11 +46,10 @@ const AllContacts = () => {
                 <TableHead>
                     <TableRow className={classes.thead}>
                         <TableCell> ID </TableCell>
-                        <TableCell> Name </TableCell>
-                        <TableCell> Username </TableCell>
+                        <TableCell> First Name </TableCell>
+                        <TableCell> Last Name </TableCell>
                         <TableCell> Email </TableCell>
-                        <TableCell> Phone </TableCell>
-                        <TableCell> </TableCell>
+                        <TableCell> Action </TableCell>
                     </TableRow>
                 </TableHead>
 
@@ -59,10 +58,9 @@ const AllContacts = () => {
                         contacts.map(user => (
                             <TableRow className={classes.row} key={user.id}>
                                 <TableCell> {user.id} </TableCell>
-                                <TableCell> {user.name} </TableCell>
-                                <TableCell> {user.username} </TableCell>
+                                <TableCell> {user.fstName} </TableCell>
+                                <TableCell> {user.lastName} </TableCell>
                                 <TableCell> {user.email} </TableCell>
-                                <TableCell> {user.phone} </TableCell>
                                 <TableCell> 
                                     <Button variant="contained" color="primary" style={{marginRight: 10}} component={Link} to={`/edit/${user.id}`}>Edit</Button>
                                     <Button variant="contained" color="secondary" onClick={() => deleteUserData(user.id)}>Delete</Button>

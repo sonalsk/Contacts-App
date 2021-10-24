@@ -20,15 +20,14 @@ const useStyles = makeStyles({
 })
 
 const initalValues = {
-    name: "",
-    username: "",
-    email: "",
-    phone: ""
+    fstName: "",
+    lastName: "",
+    email: ""
 }
 
 const EditContact = () => {
     const [ user, setUser ] = useState(initalValues);
-    const { name, username, email, phone } = user;
+    const { fstName, lastName, email } = user;
     const classes = useStyles();
     const history = useHistory();
     const { id } = useParams();
@@ -55,23 +54,18 @@ const EditContact = () => {
         <FormGroup className={classes.conatiner}>
             <Typography variant="h4"> Edit Contact </Typography>
             <FormControl>
-                <InputLabel className={classes.head}> Name </InputLabel>
-                <Input className={classes.head} onChange={(e) => onValueChange(e)} name='name' value={name} aria-describedby="my-helper-text" />
+                <InputLabel className={classes.head}> First Name </InputLabel>
+                <Input className={classes.head} onChange={(e) => onValueChange(e)} name='fstName' value={fstName} aria-describedby="my-helper-text" />
             </FormControl>
 
             <FormControl>
-                <InputLabel className={classes.head}> UserName </InputLabel>
-                <Input className={classes.head} onChange={(e) => onValueChange(e)} name='username' value={username} aria-describedby="my-helper-text" />
+                <InputLabel className={classes.head}> Last Name </InputLabel>
+                <Input className={classes.head} onChange={(e) => onValueChange(e)} name='lastName' value={lastName} aria-describedby="my-helper-text" />
             </FormControl>
 
             <FormControl>
-                <InputLabel className={classes.head}> EMail </InputLabel>
+                <InputLabel className={classes.head}> E-Mail </InputLabel>
                 <Input className={classes.head} onChange={(e) => onValueChange(e)} name='email' value={email} aria-describedby="my-helper-text" />
-            </FormControl>
-
-            <FormControl>
-                <InputLabel className={classes.head}> Phone </InputLabel>
-                <Input className={classes.head} onChange={(e) => onValueChange(e)} name='phone' value={phone} aria-describedby="my-helper-text" />
             </FormControl>
 
             <Button style={{background: '#ff5757'}} onClick={() => editUserDetail()} variant="contained">Edit Contact</Button>

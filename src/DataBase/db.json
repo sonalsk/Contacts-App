@@ -1,17 +1,15 @@
 {
   "contacts": [
     {
-      "name": "Dummy Name",
-      "username": "dummyName",
+      "fstName": "Dummy Name",
+      "lastName": "dummyName",
       "email": "DummyName@gmail",
-      "phone": "1234567897",
       "id": 1
     },
     {
-      "name": "Sonal Kushwaha",
-      "username": "sonalsk",
+      "fstName": "Sonal Kushwaha",
+      "lastName": "sonalsk",
       "email": "sonalkushwaha039@gmail.com",
-      "phone": "09667758064",
       "id": 2
     }
   ]

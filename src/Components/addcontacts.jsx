@@ -20,15 +20,14 @@ const useStyles = makeStyles({
 })
 
 const initalValues = {
-    name: "",
-    username: "",
-    email: "",
-    phone: ""
+    fstName: "",
+    lastName: "",
+    email: ""
 }
 
 const NewContact = () => {
     const [ contact, setUser ] = useState(initalValues);
-    const { name, username, email, phone } = contact;
+    const { fstName, lastName, email } = contact;
     const classes = useStyles();
     const history = useHistory();
     
@@ -46,23 +45,18 @@ const NewContact = () => {
         <FormGroup className={classes.container}>
             <Typography variant="h4"> Add New Contact </Typography>
             <FormControl>
-                <InputLabel className={classes.head}> Name </InputLabel>
-                <Input className={classes.head} onChange={(e) => onValueChange(e)} name='name' value={name} />
+                <InputLabel className={classes.head}> First Name </InputLabel>
+                <Input className={classes.head} onChange={(e) => onValueChange(e)} name='fstName' value={fstName} />
             </FormControl>
 
             <FormControl>
-                <InputLabel className={classes.head}> UserName </InputLabel>
-                <Input className={classes.head} onChange={(e) => onValueChange(e)} name='username' value={username} />
+                <InputLabel className={classes.head}> Last Name </InputLabel>
+                <Input className={classes.head} onChange={(e) => onValueChange(e)} name='lastName' value={lastName} />
             </FormControl>
 
             <FormControl>
-                <InputLabel className={classes.head}> EMail </InputLabel>
+                <InputLabel className={classes.head}> E-Mail </InputLabel>
                 <Input className={classes.head} onChange={(e) => onValueChange(e)} name='email' value={email} />
-            </FormControl>
-
-            <FormControl>
-                <InputLabel className={classes.head}> Phone </InputLabel>
-                <Input className={classes.head} onChange={(e) => onValueChange(e)} name='phone' value={phone} />
             </FormControl>
 
             <Button style={{background: '#ff5757'}} onClick={() => addUserDetail()} variant="contained">Add Contact</Button>
